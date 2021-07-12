@@ -74,7 +74,6 @@ module.exports = {
     // }
   },
 
-  contracts_directory: '../memenifty-frontend-nextjs/app/pages/contracts',
   contracts_build_directory: '../memenifty-frontend-nextjs/app/pages/abis/',
   // Set default mocha options here, use special reporters etc.
   mocha: {
