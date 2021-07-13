@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract Memenifty is ERC721PresetMinterPauserAutoId {
+contract Memenifty is ERC721 {
 
-  constructor() public ERC721PresetMinterPauserAutoId("Memenifty", "MEME", "127.0.0.1:7545") {}
+  constructor() ERC721("Memenifty", "MEME") {}
 
 
 
