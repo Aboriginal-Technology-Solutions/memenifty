@@ -4,6 +4,6 @@ import "./MemeFactoryInterface.sol";
 import "./Memenifty.sol";
 
 
-contract MemeFactory is IFactoryERC721, ERC721 {
+contract MemeFactory is MemeFactoryInterface, ERC721 {
 
 }
