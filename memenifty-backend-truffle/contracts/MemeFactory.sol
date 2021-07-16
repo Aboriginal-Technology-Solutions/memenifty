@@ -1,5 +1,9 @@
 pragma solidity ^0.8.0;
 
-contract MemeFactory is Ownable {
+import "./MemeFactoryInterface.sol";
+import "./Memenifty.sol";
+
+
+contract MemeFactory is IFactoryERC721, ERC721 {
 
 }
