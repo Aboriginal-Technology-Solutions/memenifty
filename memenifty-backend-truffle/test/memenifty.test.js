@@ -1,4 +1,8 @@
-const Memenifty = artifacts.require('./Memenifty.sol');
+const Memenifty = artifacts.require('./Memenifty.sol')
+
+require('chai')
+  .use(require('chai-as-promised'))
+  .should()
 
 contract('Memenifty', (accounts) => {
   let contract
@@ -18,8 +22,22 @@ contract('Memenifty', (accounts) => {
     })
 
     it('has a name', async() => {
-      const name = await contract.name
+      const name = await contract.name()
+      contract.name().then(console.log, console.error)
       assert.equal(name, 'MintedMeme')
+    })
+
+    it('has a symbol', async() => {
+      const symbol = await contract.symbol()
+      contract.symbol().then(console.log, console.error)
+      assert.equal(symbol, 'MEME')
+
+    it('can be minted'), async() => {
+      const mint = await contract.mint()
+      contract.mint().then(console.log, console.error)
+
+    }
+    }
     })
   })
 })
