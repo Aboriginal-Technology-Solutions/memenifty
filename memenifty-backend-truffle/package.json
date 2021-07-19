@@ -1,4 +1,13 @@
 {
+  "name": "memenifty",
+  "version": "1.0.0",
+  "description": "Mint memes as NFTs",
+  "author": "bioready@gmail.com",
+
+  "scripts": {
+    "test": "mocha"
+  },
+
   "dependencies": {
     "ganache-cli": "^6.12.2",
     "web3": "^1.4.0"
