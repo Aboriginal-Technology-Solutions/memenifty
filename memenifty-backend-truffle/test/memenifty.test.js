@@ -31,12 +31,14 @@ contract('Memenifty', (accounts) => {
       const symbol = await contract.symbol()
       contract.symbol().then(console.log, console.error)
       assert.equal(symbol, 'MEME')
+    })
 
-    it('can be minted'), async() => {
-      const mint = await contract.mint()
-      contract.mint().then(console.log, console.error)
-
-    }
+    it('can be minted', async() => {
+      const address = "0x78FaB281ffF55beB4cCEA706512447dafc87822b"
+      const hash = "QmdsS3bPUkqTDkyL6XCYEEXMcqZtwPZwCRCgLwzwNS67ub"
+      const mintMeme = await contract.mintMeme(address, hash)
+      contract.mintMeme().then(console.log(address), console.error)
+      contract.mintMeme().then(console.log(hash), console.error)
     })
   })
 })
