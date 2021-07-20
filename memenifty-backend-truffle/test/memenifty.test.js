@@ -37,7 +37,6 @@ contract('Memenifty', (accounts) => {
       contract.mint().then(console.log, console.error)
 
     }
-    }
     })
   })
 })
