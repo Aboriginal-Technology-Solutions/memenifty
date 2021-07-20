@@ -10,17 +10,16 @@ contract Memenifty is ERC721 {
   Counters.Counter private _tokenIds;
   mapping(string => uint8) hashes;
 
-  constructor() ERC721("MintedMeme", "MEME") {
+  constructor() ERC721("MintedMeme", "MEME") {}
 
-    function mintMeme(address _recipient, string memory _hash, string memory _metadata) public returns uint256 {
-      requires(hashes[_hash] != 1);
+    function mintMeme(address _recipient, string memory _hash) public returns (uint256) {
+      require(hashes[_hash] != 1);
       hashes[_hash] = 1;
-      tokenIds.increment();
-      uint256 newItemId = _tokenIds.current();
-      _mint(recipient, newItemId);
-      _setTokenURI(newItemId, _metadata);
-      return newItemId;
-    }
+      _tokenIds.increment();
+      uint256 _newItemId = _tokenIds.current();
+      _safeMint(_recipient, _newItemId);
+      tokenURI(_newItemId);
+      return _newItemId;
   }
 
 
