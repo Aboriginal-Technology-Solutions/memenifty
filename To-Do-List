@@ -1,7 +1,0 @@
-# Build out contracts
-### Get an idea of what to do from OpenSea Creatures NFT project:
-          https://github.com/ProjectOpenSea/opensea-creatures/tree/master/contracts
-
-## Recreate IFactoryERC721.sol from opensea
-## Recreate CreatureFactory.sol from OpenSea
-## Recreate Creature.sol from OpenSea
