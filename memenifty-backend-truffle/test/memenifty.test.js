@@ -39,6 +39,7 @@ contract('Memenifty', (accounts) => {
       const mintMeme = await contract.mintMeme(address, hash)
       contract.mintMeme().then(console.log(address), console.error)
       contract.mintMeme().then(console.log(hash), console.error)
+      contract.mintMeme().then(console.log(newItemID))
     })
   })
 })
