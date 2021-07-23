@@ -7,6 +7,7 @@ import detectEthereumProvider from '@metamask/detect-provider';
 const provider = await detectEthereumProvider();
 
 if (provider) {
+  provider === window.ethereum
   startApp(provider); // Initialize your app
 } else {
   console.log('Please install MetaMask!');
