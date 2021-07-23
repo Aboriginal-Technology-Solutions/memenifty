@@ -8,14 +8,12 @@ import githublogo from './GitHub-Mark-Light-32px.png'
 import Footer from './footer.tsx'
 import MainBody from './mainbody.tsx'
 
-
 export default function Home() {
   return (
     <memenifty className="container">
         <Head>
           <title>Memenifty</title>
           <meta name="tab description" content="Memenifty" />
-          <link rel="icon" href="/logo.ico" />
         </Head>
 
         <MainNav />

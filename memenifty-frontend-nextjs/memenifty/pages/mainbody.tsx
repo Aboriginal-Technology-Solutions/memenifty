@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 class MainBody extends React.Component{
   render() {
     return(
-      <body className="container">
+      <body className="container-fluid mt-5 mx-auto">
       <br />
       <br />
         <div className="d-flex mx-auto my-auto justify-content-center">
