@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Web3 from 'web3';
-import ConnectMetamask from './Components/connectMetamask.tsx'
+import React, { Component } from 'react'
+import ConnectWallet from './Components/wallet.tsx'
 
 class MainNav extends React.Component{
+
   render() {
     return(
         <navbar className="container-fluid fixed-top bg-light flex-md-nowrap mx-auto my-auto shadow d-flex flex-column">
@@ -23,7 +23,10 @@ class MainNav extends React.Component{
                 Memenifty
               </a>
           <div className="d-flex col-8 mx-auto my-auto"></div>
-          <button type="button" className="d-flex col-4 p-1 mx-auto my-auto btn btn-secondary">Connect to MetaMask</button>
+          <button
+              type="button"
+              className="d-flex col-4 p-1 mx-auto my-auto btn btn-secondary"
+              onClick={ConnectWallet}>Connect to MetaMask</button>
           </div>
           <div className="d-flex col-5 mx-auto my-auto"></div>
           <ui className="nav-item d-flex flex-row justify-content-center">
