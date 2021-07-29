@@ -5,7 +5,7 @@ class MainNav extends React.Component{
 
   render() {
     return(
-        <navbar className="container-fluid fixed-top bg-light flex-md-nowrap mx-auto my-auto shadow d-flex flex-column">
+        <div className="container-fluid fixed-top bg-light flex-md-nowrap mx-auto my-auto shadow d-flex flex-column">
           <div className="d-flex col-5 flex-row mx-auto my-auto">
             <div className="d-flex col-4 mx-auto my-auto"></div>
               <a
@@ -26,7 +26,9 @@ class MainNav extends React.Component{
           <button
               type="button"
               className="d-flex col-4 p-1 mx-auto my-auto btn btn-secondary"
-              onClick={ConnectWallet}>Connect to MetaMask</button>
+              onClick={ConnectWallet}>
+                <div className='d-flex mx-auto my-auto text-light'>Connect to MetaMask</div>
+              </button>
           </div>
           <div className="d-flex col-5 mx-auto my-auto"></div>
           <ui className="nav-item d-flex flex-row justify-content-center">
@@ -34,7 +36,7 @@ class MainNav extends React.Component{
               <a className="nav-link text-dark" href="localhost:3000">Browse Memes</a>
               <a className="nav-link text-dark" href="localhost:3000">Mint a Meme</a>
           </ui>
-        </navbar>
+        </div>
     )
   }
 }

@@ -6,7 +6,7 @@ class Footer extends React.Component {
       <footer>
         <nav className="container-fluid fixed-bottom bg-dark flex-md-nowrap p-3 border border-secondary rounded-top">
           <ul className="d-flex mx-auto my-auto justify-content-center">
-                <li class="nav-item p-3 d-flex">
+                <li className="nav-item p-3 d-flex">
                   <a href="https://discord.gg/48ChbnEa">
                   <img src='https://image.flaticon.com/icons/png/512/3670/3670157.png'
                   width="35"

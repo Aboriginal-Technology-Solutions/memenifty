@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 class MainBody extends React.Component{
   render() {
     return(
-      <body className="container-fluid mt-5 mx-auto">
+      <div className="container-fluid mt-5 mx-auto">
       <br />
       <br />
         <div className="d-flex mx-auto my-auto justify-content-center">
@@ -18,7 +18,7 @@ class MainBody extends React.Component{
             This project will allow users to mint an image as an NFT to be stored on the blockchain forever.
           </p>
         </div>
-      </body>
+      </div>
 
 
     )
