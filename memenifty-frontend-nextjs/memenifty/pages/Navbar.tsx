@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ConnectWallet from './Components/wallet.tsx'
+import ConnectMetaMask from './Components/wallet.tsx'
 
 class MainNav extends React.Component{
 
@@ -26,7 +26,7 @@ class MainNav extends React.Component{
           <button
               type="button"
               className="d-flex col-4 p-1 mx-auto my-auto btn btn-secondary"
-              onClick={ConnectWallet}>
+              onClick={ ConnectMetaMask }>
                 <div className='d-flex mx-auto my-auto text-light'>Connect to MetaMask</div>
               </button>
           </div>
