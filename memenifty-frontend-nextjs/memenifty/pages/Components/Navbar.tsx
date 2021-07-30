@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ConnectMetaMask from './Components/walletconnect.tsx'
+import ConnectMetaMask from './walletconnect.tsx'
 
 class MainNav extends React.Component{
 

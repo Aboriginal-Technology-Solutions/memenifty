@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 
 class MainBody extends React.Component{
   render() {
