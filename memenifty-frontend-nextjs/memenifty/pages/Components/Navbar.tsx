@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import ConnectMetaMask from './walletconnect.tsx'
+import ConnectMetaMask from './web3container.tsx'
+import LoadBlockChainData from './web3container.tsx'
 
 class MainNav extends React.Component{
+
 
   render() {
     return(
