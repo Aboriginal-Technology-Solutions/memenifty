@@ -10,6 +10,11 @@ async function ConnectMetaMask() {
     window.ethereum.on('accountsChanged', function (accounts) {
       console.log(accounts[0])
     });
+
+async function MintMeme() {
+  // create a variable with ipfs id
+  // call the safemint function
+}
 }
 
 export default ConnectMetaMask
