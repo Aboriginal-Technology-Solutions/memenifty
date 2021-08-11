@@ -2,7 +2,6 @@ import Footer from './footer.tsx'
 import MainNav from './Navbar.tsx'
 import ConnectMetaMask from './web3container.tsx'
 import MainBody from './mainbody.tsx'
-import MintMemePopup from './MintMemePopup.tsx'
 
 export default class Components extends React.Component {
   state = {
@@ -14,7 +13,7 @@ export default class Components extends React.Component {
       seen: !this.state.seen
     })
   }
-  
+
   render() {
   return (
    <div>

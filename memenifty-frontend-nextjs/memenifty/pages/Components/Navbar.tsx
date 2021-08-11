@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import ConnectMetaMask from './web3container.tsx'
 import LoadBlockChainData from './web3container.tsx'
-import MintMemePopup from './MintMemePopup.tsx'
 
 class MainNav extends React.Component{
+
 
   render() {
     return(
@@ -36,8 +36,7 @@ class MainNav extends React.Component{
           <ui className="nav-item d-flex flex-row justify-content-center">
               <a className="nav-link text-dark" href="localhost:3000">Home</a>
               <a className="nav-link text-dark" href="localhost:3000">Browse Memes</a>
-              <a className="nav-link text-dark"
-                  onClick={ MintMemePopup }>Mint a Meme</a>
+              <a className="nav-link text-dark">Mint a Meme</a>
           </ui>
         </div>
     )
