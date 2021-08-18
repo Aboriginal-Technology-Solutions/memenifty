@@ -35,8 +35,6 @@ class MainNav extends React.Component{
           </div>
           <div className="d-flex col-5 mx-auto my-auto"></div>
           <ui className="nav-item d-flex flex-row justify-content-center">
-              <a className="nav-link text-dark" href="localhost:3000">Home</a>
-              <a className="nav-link text-dark" href="localhost:3000">Browse Memes</a>
           </ui>
         </div>
     )
