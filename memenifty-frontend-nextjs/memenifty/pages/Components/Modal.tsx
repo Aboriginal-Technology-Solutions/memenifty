@@ -24,7 +24,7 @@ const IpfsForm = (props) => {
             <Button color="danger" onClick={toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
-      </div>
+    </div>
   )
 }
 

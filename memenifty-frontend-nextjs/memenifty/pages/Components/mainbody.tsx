@@ -22,11 +22,13 @@ class MainBody extends React.Component{
             This project will allow users to mint an image as an NFT to be stored on the blockchain forever.
           </p>
         </div>
-
         <div className="d-flex justify-content-center mx-auto my-5">
           <IpfsForm />
-          </div>
         </div>
+        <div className="container-fluid justify-contant-center mx-auto my-auto">
+          <BrowseMemes />
+        </div>
+          </div>
 
     )
   }

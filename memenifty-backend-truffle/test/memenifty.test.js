@@ -12,9 +12,16 @@ contract('Memenifty', (accounts) => {
   })
 
   describe('deployment', async () => {
+
+    it('connects to accounts', async () => {
+      let accounts = await web3.eth.getAccounts()
+      let deployer = accounts[0]
+      console.log("Deployer address", deployer)
+    })
+
     it('deploys successfully', async() => {
-      const address = contract.address
-      console.log(address)
+      const address = await contract.address
+      console.log("Contract Address:", address)
       assert.notEqual(address, 0x0)
       assert.notEqual(address, '')
       assert.notEqual(address, null)
@@ -34,11 +41,19 @@ contract('Memenifty', (accounts) => {
     })
 
     it('can be minted', async() => {
-      const address = "0x70df80469172c4b4E342521C7867b6c6A2D4E40D"
-      const hash = "QmdsS3bPUkqTDkyL6XCYEEXMcqZtwPZwCRCgLwzwNS67ub"
-      const mintMeme = await contract.mintMeme(address, hash)
-      contract.mintMeme().then(console.log(address), console.error)
-      contract.mintMeme().then(console.log(hash), console.error)
+      let accounts = await web3.eth.getAccounts()
+      let receiver = accounts[1]
+      let hash = "QmdsS3bPUkqTDkyL6XCYEEXMcqZtwPZwCRCgLwzwNS67ub"
+      console.log("Reciever Address:", receiver)
+      contract.mintMeme(receiver, hash)
+    })
+
+    it('has a balance', async() => {
+      let accounts = await web3.eth.getAccounts()
+      let receiver = accounts[1]
+      let balance = await contract.balanceOf(receiver)
+      await contract.balanceOf(receiver).then(console.log)
+      assert.equal(balance, 1)
     })
   })
 })

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from "web3";
+import Memenifty from '../abis/Memenifty.json'
 
 
 async function ConnectMetaMask() {
@@ -11,10 +12,19 @@ async function ConnectMetaMask() {
       console.log(accounts[0])
     });
 
-async function MintMeme() {
-  // create a variable with ipfs id
-  // call the safemint function
-}
 }
 
+async function LoadContract() {
+  const networkId = await window.ethereum.net.getId()
+  const networkData = Memenifty.networks[networkId]
+  if(networkData) {
+    const abi = Memenifty.abi
+    const address = networkData.address
+    const myContract = new web3.eth.Contract(abi, address)
+    console.log(MyContract)
+  } else {
+    window.alert('Smart Contract is not deployed to network')
+  }
+
+}
 export default ConnectMetaMask
